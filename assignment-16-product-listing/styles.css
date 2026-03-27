@@ -1,0 +1,139 @@
+body{
+font-family:'Segoe UI',Arial;
+background:linear-gradient(to right,#4facfe,#00f2fe);
+margin:0;
+padding:0;
+}
+
+.container{
+width:900px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+h1{
+color:#2c3e50;
+margin-bottom:20px;
+}
+
+/* Top bar */
+.top-bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
+
+/* Filter buttons */
+.filters button{
+padding:8px 15px;
+margin:3px;
+border:none;
+background:#3498db;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.filters button:hover{
+background:#2980b9;
+}
+
+/* Sort button */
+.sort-btn{
+padding:8px 15px;
+border:none;
+background:#2ecc71;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.sort-btn:hover{
+background:#27ae60;
+}
+
+/* Cart */
+.cart{
+font-weight:bold;
+}
+
+/* Product grid */
+.product-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+/* Product card */
+.product-card{
+background:#f9f9f9;
+padding:20px;
+border-radius:8px;
+border-left:4px solid #3498db;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+transition:0.2s;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+min-height:320px;
+}
+
+/* Hover effect */
+.product-card:hover{
+transform:scale(1.04);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Image fix (important) */
+.product-card img{
+width:120px;
+height:120px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+/* Product name */
+.product-card h3{
+font-size:16px;
+margin:5px 0;
+}
+
+/* Price */
+.price{
+font-size:18px;
+color:#27ae60;
+font-weight:bold;
+}
+
+/* Rating */
+.rating{
+color:#f39c12;
+font-size:14px;
+}
+
+/* Stock text */
+.stock{
+font-size:13px;
+color:#777;
+}
+
+/* Add to cart button */
+.product-card button{
+margin-top:auto;
+padding:8px 15px;
+border:none;
+background:#e67e22;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+.product-card button:hover{
+background:#d35400;
+}

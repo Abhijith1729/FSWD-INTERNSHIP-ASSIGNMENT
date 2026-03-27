@@ -1,0 +1,42 @@
+CLIENT SERVER ARCHITECTURE
+
+Client-server architecture is a network model where a client sends requests and a server provides responses.
+
+Client:
+Device that sends request (browser, laptop, mobile)
+
+Server:
+Computer that stores website data and sends responses
+
+Protocol:
+HTTP or HTTPS communication between client and server
+
+--------------------------------------------------
+
+CLIENT SERVER DIAGRAM
+
+Client (Browser)
+      |
+      | HTTP Request
+      v
+    Internet
+      |
+      v
+   Web Server
+      |
+      | HTTP Response
+      v
+Client (Browser)
+
+--------------------------------------------------
+
+WHAT HAPPENS WHEN YOU OPEN A WEBSITE
+
+1. User enters URL in browser
+2. Browser performs DNS lookup
+3. DNS returns IP address of server
+4. Browser sends HTTP request to server
+5. Server processes request
+6. Server sends HTTP response
+7. Browser loads HTML, CSS, JavaScript
+8. Website appears on screen

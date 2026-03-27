@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mini E-Commerce Store</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Mini E-Commerce Store</h1>
+
+<div class="top-bar">
+
+<div class="filters">
+<button onclick="filterProducts('all')">All</button>
+<button onclick="filterProducts('electronics')">Electronics</button>
+<button onclick="filterProducts('clothing')">Clothing</button>
+<button onclick="filterProducts('books')">Books</button>
+</div>
+
+<button class="sort-btn" onclick="sortByPrice()">Sort by Price</button>
+
+<div class="cart">
+🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+</div>
+
+<div id="productGrid" class="product-grid"></div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
