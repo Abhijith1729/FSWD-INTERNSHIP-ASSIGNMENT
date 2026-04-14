@@ -3,15 +3,13 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
+// Middleware (IMPORTANT for POST)
+app.use(express.json());
+
 // Sample Data
-const books = [
+let books = [
   { id: 1, title: "JavaScript Basics" },
   { id: 2, title: "Node.js Guide" }
-];
-
-const authors = [
-  { id: 1, name: "John Doe" },
-  { id: 2, name: "Jane Smith" }
 ];
 
 // Home Route
@@ -35,20 +33,30 @@ app.get("/books/:id", (req, res) => {
   res.json(book);
 });
 
-// Get All Authors
-app.get("/authors", (req, res) => {
-  res.json(authors);
+// ➕ Add New Book (POST)
+app.post("/books", (req, res) => {
+  const newBook = {
+    id: books.length + 1,
+    title: req.body.title
+  };
+
+  books.push(newBook);
+  res.status(201).json(newBook);
 });
 
-// Get Author by ID
-app.get("/authors/:id", (req, res) => {
-  const author = authors.find(a => a.id === parseInt(req.params.id));
+// ❌ Delete Book
+app.delete("/books/:id", (req, res) => {
+  const bookId = parseInt(req.params.id);
 
-  if (!author) {
-    return res.status(404).send("Author not found");
+  const bookExists = books.some(b => b.id === bookId);
+
+  if (!bookExists) {
+    return res.status(404).send("Book not found");
   }
 
-  res.json(author);
+  books = books.filter(b => b.id !== bookId);
+
+  res.send("Book deleted successfully");
 });
 
 // Start Server
